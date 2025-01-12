@@ -1,9 +1,10 @@
 /* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
+  background: linear-gradient(to right, #f9f9f9, #e8f5e9);
   background-color: #f9f9f9;
   color: #333;
 }
@@ -12,17 +13,28 @@ h1 {
   text-align: center;
   margin: 20px 0;
   color: #4caf50;
+  font-family: "Merriweather", serif;
 }
 
 /* Form Container */
 .form-container {
+  animation: fadeIn 0.5s ease-in;
   max-width: 600px;
   margin: 20px auto;
   padding: 20px;
   background: #fff;
   border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Form Elements */
@@ -42,6 +54,7 @@ legend {
   font-weight: bold;
   color: #4caf50;
   padding: 0 5px;
+  font-family: "Merriweather", serif;
 }
 
 .form-group {
@@ -80,7 +93,8 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  transform: scale(1.05);
+  background-color: #388e3c;
 }
 
 .required {
@@ -95,4 +109,9 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+input:focus,
+select:focus {
+  box-shadow: 0 0 5px #4caf50;
 }
