@@ -3,7 +3,137 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta
+      name="description"
+      content="School registration form for new student enrollments. Fill in the required details to register."
+    />
+    <meta
+      name="keywords"
+      content="school registration, student enrollment, education form"
+    />
+    <meta name="author" content="Makbel A." />
+    <meta property="og:title" content="School Registration Form" />
+    <!-- Open Graph tag for social sharing -->
+    <meta
+      property="og:description"
+      content="Easily register students for the upcoming academic year using this form."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="URL-to-an-image" />
+    <!-- To be Replaced with a URL to an image for social sharing -->
+
+    <title>School Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link to external CSS file -->
   </head>
-  <body></body>
+
+  <body>
+    <div class="form-container">
+      <h1>School Registration Form</h1>
+      <form action="#" method="post">
+        <!-- Placeholder action URL -->
+        <!-- Personal Details Section -->
+        <fieldset>
+          <legend>Personal Details</legend>
+
+          <div class="form-group">
+            <label for="student-name"
+              >Full Name <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="student-name"
+              name="student-name"
+              placeholder="Enter full name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="dob"
+              >Date of Birth <span class="required">*</span></label
+            >
+            <input type="date" id="dob" name="dob" required />
+          </div>
+
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender">
+              <option value="">Select</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <!-- Guardian Details Section -->
+        <fieldset>
+          <legend>Guardian Details</legend>
+
+          <div class="form-group">
+            <label for="guardian-name"
+              >Guardian's Full Name <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="guardian-name"
+              name="guardian-name"
+              placeholder="Enter guardian's name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="contact"
+              >Contact Number <span class="required">*</span></label
+            >
+            <input
+              type="tel"
+              id="contact"
+              name="contact"
+              placeholder="Enter contact number"
+              required
+            />
+          </div>
+        </fieldset>
+
+        <!-- Academic Information Section -->
+        <fieldset>
+          <legend>Academic Information</legend>
+
+          <div class="form-group">
+            <label for="grade">Grade <span class="required">*</span></label>
+            <select id="grade" name="grade" required>
+              <option value="">Select Grade</option>
+              <option value="grade-1">Grade 1</option>
+              <option value="grade-2">Grade 2</option>
+              <option value="grade-3">Grade 3</option>
+              <!-- Add more grades as needed -->
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="prev-school">Previous School (if any)</label>
+            <input
+              type="text"
+              id="prev-school"
+              name="prev-school"
+              placeholder="Enter previous school name"
+            />
+          </div>
+        </fieldset>
+
+        <!-- Terms and Submit -->
+        <div class="form-group">
+          <input type="checkbox" id="terms" name="terms" required />
+          <label for="terms"
+            >I agree to the <a href="#">terms and conditions</a>.</label
+          >
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
 </html>
